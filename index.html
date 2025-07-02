@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hepzibah Evanglin | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional: Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(160deg, #1f005c, #5b0060, #870160);
+      color: #fff;
+      padding-top: 5rem;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: none;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+   
+    a.btn-primary {
+      background-color: #6a0dad;
+      border-color: #6a0dad;
+    }
+    .btn-outline-light:hover {
+      background-color: #fff;
+      color: #6a0dad;
+    }
+    footer {
+      border-top: 1px solid #ffffff22;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    section {
+      margin: 3rem 0;
+    }
+    .navbar-custom {
+      background-color: #1a0034;
+    }
+    .nav-link {
+      color: #fff !important;
+    }
+    .nav-link:hover {
+      color: #c0a0ff !important;
+    }
+    .form-control {
+      background-color: #fff;
+      color: #000;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .form-control:focus {
+      border-color: #6a0dad;
+      box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25);
+    }
+    .profile{
+        max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+    }
+
+  .banner {
+  padding: 60px 20px;
+  background: #fff;
+}
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+  text-align:left;
+}
+.left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.left .highlight {
+  color: #351e62;
+}
+.left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+.left p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+.right {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+.profile-img{
+  border-radius:50%;
+  width:250px;
+  height:250px;
+}
+
+/* About section */
+
+ h2.fw-bold{
+  text-align:center;
+}
+.mb-5{
+  text-align:center;
+}
+
+.card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 12px;
+    }
+    .card h5, .card h6 {
+      color: white;
+    }
+    .highlight-card {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00bfff;
+    }
+    .icon {
+      font-size: 1.2rem;
+      margin-right: 8px;
+    }
+
+    /* skills */
+    .experience-section {
+      padding: 80px 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 30px;
+      /* border-left: 2px solid rgba(255, 255, 255, 0.3); */
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #a66cff, #00cfff);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 20px 0 20px 40px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -23px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(45deg, #a66cff, #00cfff);
+      border-radius: 50%;
+      border: 4px solid #1d0648;
+      z-index: 1;
+    }
+
+    .experience-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .experience-card h5 {
+      color: #d4aaff;
+      font-weight: bold;
+    }
+
+    .experience-card .company {
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .experience-tags span {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #caaaff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      margin-right: 8px;
+      font-size: 0.85rem;
+    }
+
+    .experience-meta {
+      font-size: 0.9rem;
+      color: #ddd;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .experience-meta i {
+      margin-right: 5px;
+    }
+
+    .experience-tags1 span {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #caaaff;
+      border-radius: 12px;
+      padding: 2px 7px;
+      margin-right: 8px;
+      font-size: 0.85rem;
+    }
+
+    /* <!contact section--> */
+
+    .contact-section {
+      padding: 80px 20px;
+    }
+
+    .contact-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .contact-card h5 {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .contact-info i {
+      font-size: 1.2rem;
+      margin-right: 10px;
+      color: #00bfff;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .form-control,
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: white;
+    }
+
+    .form-control::placeholder {
+      color: #bbb;
+    }
+
+    .btn-purple {
+      background: linear-gradient(to right, #9d4edd, #6a00ff);
+      border: none;
+      color: white;
+    }
+
+    .btn-purple:hover {
+      opacity: 0.9;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 12px;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 8px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+
+    /* certifications */
+
+    .cert-section {
+      padding: 60px 20px;
+    }
+
+    .cert-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 40px 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cert-card h3 {
+      font-weight: bold;
+    }
+
+    .cert-card p.subtitle {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .cert-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .cert-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: #4dabf7;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .cert-title {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .cert-meta {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-left: 26px;
+    }
+
+    .cert-link a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #4dabf7;
+    }
+
+    .cert-link a:hover {
+      text-decoration: underline;
+    }
+
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .left, .right {
+    padding: 10px 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Hepzibah Evanglin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Skills">skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id ="home">
+        <div class="banner-content">
+        <div class="left">
+          
+    <h1>A. Hepzibah <span class="text-info">Evanglin</span></h1>
+    <p>Transforming ideas into reliable, tested solutions</p>
+    <div class="mb-3">
+      <a href="Hepzibah_Resume.pdf" download="A_Hepzibah_Evanglin_Resume.pdf" class="btn btn-primary">Download Resume</a>
+      <a href="#" class="btn btn-outline-light">View My Work</a>
+    </div>
+    </div>
+    <div class="right">
+   <img src="Profile.png" alt="Hepzibah Evanglin" class="profile-img mb-3" />
+   </div>
+ </section>
+
+    <section id="about">
+     <div class="container">
+    <h2 class="fw-bold mb-2">About Me</h2>
+    <p class="mb-5">Let's discover who I am and what drives my passion for quality and excellence</p>
+    
+    <div class="row g-4">
+      <!-- Left Side -->
+      <div class="col-md-6">
+        <!-- My Journey Card -->
+        <div class="card p-4 mb-3">
+          <h5><span class="icon">👤</span>My Journey</h5>
+          <p class="mt-2 mb-0">
+            Quality Analyst with over four years of professional experience. I have progressively transitioned from a Shopify Front-End Developer to a Manual QA Analyst, and I am currently moving into a Business Analyst role. I am also enhancing my technical skills in automation testing, with a focus on Selenium, Java, and SQL.
+          </p>
+        </div>
+
+        <!-- Education Card -->
+        <div class="card p-4">
+          <h5><span class="icon">🎓</span>Education</h5>
+          <h6 class="mt-2 mb-0 fw-bold">B.E., Electronics and Communication Engineering</h6>
+          <p class="mb-0">Holy Cross Engineering College, Thoothukudi</p>
+          <small class="text-muted">2015 - 2019</small>
+        </div>
+      </div>
+
+      <!-- Right Side Stats -->
+      <div class="col-md-6">
+        <div class="row g-4">
+          <div class="col-6">
+            <div class="card p-4 text-center">
+              <div class="highlight-card">4+</div>
+              <p class="mb-0">Years Experience</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card p-4 text-center">
+              <div class="highlight-card">3</div>
+              <p class="mb-0">Career Transitions</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card p-4 text-center">
+              <div class="highlight-card">2</div>
+              <p class="mb-0">Certifications</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card p-4 text-center">
+              <div class="highlight-card">∞</div>
+              <p class="mb-0">Learning Journey</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="fw-bold mb-2">Professional Experience</h2>
+      <p class="mb-5">My career journey through different roles and technologies</p>
+  
+      <div class="timeline text-start">
+  
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="experience-card">
+            <div class="experience-meta">
+              <div><i class="bi bi-calendar-event"></i> June 2024 – Present</div>
+              <div><i class="bi bi-geo-alt"></i> Current Role</div>
+            </div>
+            <h5>Business Analyst</h5>
+            <div class="company">Centizen Inc.</div>
+            <p class="mt-2">
+              Transitioning into business analysis, focusing on requirements gathering, process documentation, and stakeholder communication.
+            </p>
+            <div class="experience-tags mt-3">
+              <span>Business Analysis</span>
+              <span>Requirements Gathering</span>
+              <span>Process Documentation</span>
+              <span>Stakeholder Management</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="experience-card">
+            <div class="experience-meta">
+              <div><i class="bi bi-calendar-event"></i> May 2022 – May 2024</div>
+              <div><i class="bi bi-geo-alt"></i> 2 years</div>
+            </div>
+            <h5>Quality Analyst</h5>
+            <div class="company">Centizen Inc.</div>
+            <p class="mt-2">
+              Worked on manual and automation testing. Focused on identifying bugs, writing test cases, and ensuring product quality.
+            </p>
+            <div class="experience-tags mt-3">
+              <span>Manual Testing</span>
+              <span>Selenium</span>
+              <span>Bug Tracking</span>
+              <span>Test Documentation</span>
+            </div>
+          </div>
+        </div>
+
+           <!-- Timeline Item 3 -->
+           <div class="timeline-item">
+            <div class="experience-card">
+              <div class="experience-meta">
+                <div><i class="bi bi-calendar-event"></i>Nov 2020 – Apr 2022</div>
+                <div><i class="bi bi-geo-alt"></i>1.5 years</div>
+              </div>
+              <h5>Software Engineer</h5>
+              <div class="company">Bezohminds TVL</div>
+              <p class="mt-2">
+                Developed and customized Shopify stores, implemented front-end solutions, and optimized e-commerce experiences.
+              </p>
+              <div class="experience-tags mt-3">
+                <span>Shopify Development</span>
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>E-commerce</span>
+                <span>Front-end Development</span>
+              </div>
+            </div>
+          </div>
+  
+        <!-- Add more timeline items here -->
+  
+      </div>
+    </div>
+    </section>
+
+<!--Skills & Expertise-->
+    <section id="Skills">
+      <div class="container">
+     <h2 class="fw-bold mb-2">Skills & Expertise</h2>
+     <p class="mb-5">Technologies and methodologies I work with to deliver quality solutions</p>
+     
+     <div class="row g-4">
+       <!-- Left Side -->
+       <div class="col-md-6">
+         <!-- Automation & Testing -->
+         <div class="card p-4 mb-3">
+           <h5><span class="icon">👤</span>Automation & Testing</h5>
+           <div class="experience-tags1 mt-3">
+            <span>Selenium (Java)</span>
+            <span>Postman</span>
+            <span>Manual Testing</span>
+            <span>SQL</span>
+            <span>GitLab</span>
+            <span>API Testing</span>
+          </div>
+         </div>
+ 
+         <!-- Documentation & Analysis -->
+         <div class="card p-4">
+           <h5><span class="icon">🎓</span>Documentation & Analysis</h5>
+           <div class="experience-tags1 mt-3">
+            <span>BRD</span>
+            <span>FRD</span>
+            <span>Business Analysis</span>
+            <span>Requirements Gathering</span>
+            <span>Process documentation</span>
+           </div>
+         </div>
+        </div>
+
+       <div class="col-md-6">
+        <div class="row g-4">
+       
+            <div class="card p-4">
+              <h5><span class="icon">🎓</span>Development</h5>
+              <div class="experience-tags1 mt-3">
+               <span>HTML</span>
+               <span>CSS</span>
+               <span>JavaScript</span>
+               <span>Front-end Development</span>
+               <span>E-commerce Solutions</span>
+              </div>
+            </div>
+           </div>
+
+           <div class="card p-4">
+            <h5><span class="icon">🎓</span>Tools & Methodologies</h5>
+            <div class="experience-tags1 mt-3">
+             <span>GitHub</span>
+             <span>Agile Methodologies</span>
+             <span>Scrum</span>
+             <span>JIRA</span>
+             <span>Test Case Management</span>
+             <span>Bug Tracking</span>
+            </div>
+        
+         </div>
+         </div>
+     </div>
+ </div>
+   </div>
+   </div>
+     </section>
+ 
+
+    <!--certifications-->
+
+     <section class="cert-section">
+  <div class="cert-card text-center">
+    <h3>Certifications</h3>
+    <p class="subtitle">Professional credentials and achievements</p>
+
+    <!-- Certification 1 -->
+    <div class="cert-item">
+      <div class="cert-left">
+        <div class="dot"></div>
+        <div>
+          <div class="cert-title">Certified Business Analyst – Foundation</div>
+          <div class="cert-meta">Issued: Jan 2025 | <span class="cert-link"><a href="https://www.linkedin.com/learning/certificates/119225a02dd58b7e66b2a0561106e5a59b8b834b339c6e6dc81235526d6ef771?trk=share_certificate">View Certificate</a></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification 2 -->
+    <div class="cert-item">
+      <div class="cert-left">
+        <div class="dot"></div>
+        <div>
+          <div class="cert-title">MySQL Certificate – Great Learning</div>
+          <div class="cert-meta">Issued: Sep 2024 | <span class="cert-link"><a href="https://olympus.mygreatlearning.com/courses/86168/certificate">View Certificate</a></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--contact-->
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="fw-bold mb-2">Let's Connect</h2>
+        <p class="mb-5">Ready to discuss opportunities or have questions? I'd love to hear from you!</p>
+    
+        <div class="row g-4 text-start">
+          <!-- Contact Info -->
+          <div class="col-md-6">
+            <div class="contact-card h-100">
+              <h5>Get In Touch</h5>
+              <p>Feel free to reach out for collaborations, opportunities, or just a friendly chat about technology and quality assurance.</p>
+    
+              <div class="contact-info mt-4">
+                <p><i class="bi bi-envelope-fill"></i> hepzibahevanglin@gmail.com</p>
+                <p><i class="bi bi-telephone-fill"></i> 9629988082</p>
+                <p><i class="bi bi-geo-alt-fill"></i> Tirunelveli</p>
+              </div>
+    
+              <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+    
+              <h6>Connect on Social</h6>
+              <div class="social-icons mt-2">
+                <a href="https://github.com/hepzibahevanglin" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/hepzibah-evanglin-4617221b6/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+
+              
+             </div>
+
+           
+          </div>
+          
+    
+          <!-- Contact Form -->
+          <div class="col-md-6">
+            <div class="contact-card h-100">
+              <h5>Send a Message</h5>
+              <form id="contact-form">
+                <div class="row mb-3">
+                  <div class="col">
+                    <input type="text" name="user_name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="col">
+                    <input type="email" name="user_email" class="form-control" placeholder="your.email@example.com" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="subject" class="form-control" placeholder="What's this about?" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-purple w-100">
+                  <i class="bi bi-send"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card p-2">
+            <h5><span class="icon">🎓</span>Available for Opportunities</h5>
+            <div class="experience-tags1 mt-3">
+             <span>Business Analyst</span>
+             <span>QA Automation</span>
+             <span>Front-End Development</span>
+           
+            </div>
+          </div>
+         </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <footer>
+      © 2024 A. Hepzibah Evanglin. Built with passion and attention to detail.
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+
+  (function() {
+    emailjs.init("mzQC0JshSq8bnBJUU"); // Replace with your public key
+  })();
+
+  
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_aq1oxmr", "template_9syx1ah", this).then(
+    function () {
+      alert("Message sent successfully!");
+    },
+    function (error) {
+      alert("Failed to send. Try again!");
+    }
+  );
+});
+
+
+
+</script>
+
+  
+</body>
+</html>
